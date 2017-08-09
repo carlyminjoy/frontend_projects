@@ -1,0 +1,58 @@
+html, body, .viewport { 
+  width: 100%; 
+  height: 100%; 
+  margin: 0; 
+  font-family: palatino;
+  font-size: 1em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #FD6E8A;
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #848D82;
+  width: 500px;
+  padding: 20px;
+}
+
+#quote h2 {
+  text-align: center;
+  color: #ECE59A;
+  margin-bottom: 5px;
+}
+
+#quote {
+  text-align: right;
+  color: #250352;
+}
+
+#get-quote {
+  padding: 10px;
+  margin: 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #FD6E8A;
+  background-color: #250352;
+  font-family: helvetica;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#get-quote:hover {
+  background-color: #FD6E8A;
+  color: #250352;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
