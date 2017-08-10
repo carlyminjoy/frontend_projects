@@ -35,22 +35,26 @@ html, body, .viewport {
 }
 
 #get-quote {
-  padding: 10px;
-  margin: 15px;
   font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  color: #FD6E8A;
-  background-color: #250352;
   font-family: helvetica;
   text-transform: uppercase;
   font-weight: 600;
 }
+#get-quote, #tweet {
+  padding: 10px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  color: #FD6E8A;
+  background-color: #250352;
+}
 
-#get-quote:hover {
+#get-quote:hover,
+#tweet:hover {
   background-color: #FD6E8A;
   color: #250352;
   outline: none;
+  border: none;
 }
 
 button:focus {

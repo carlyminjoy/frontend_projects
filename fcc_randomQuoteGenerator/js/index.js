@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  var quote = "";
+  var author = "";
   getQuote();
 })
 
@@ -8,8 +10,8 @@ function getQuote() {
 }
 
 function update(response) {
-  var quote = response.quoteText;
-  var author = response.quoteAuthor;
+  quote = response.quoteText;
+  author = response.quoteAuthor;
   html = ("<h2>" + '"' + quote + '"' + "</h2>"
          + "<cite> - " + author + "</cite>");
   $("#quote").html(html);
@@ -17,4 +19,8 @@ function update(response) {
 
 $('#get-quote').click(function() {
   getQuote();
+});
+
+$('#tweet').click(function() {
+  window.open('http://twitter.com/share?text="' + quote.replace(";", ". ") + '" - ' + author);
 });
