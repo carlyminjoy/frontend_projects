@@ -13,8 +13,10 @@ function getLocation() {
 }
 
 function getWeather(lon, lat) {
-$.getJSON("api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon=" + lon,
+$.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02a18b37174cc92c4fc&lat=-27.3944245&lon=153.074884&lat="+ lat + "&lon=" + lon,
   function(data) {
-    console.log(data);
+    html = "<h3>" + data.name + "</h3>" + "<br>" +
+           "<h4>Weather: " + data.weather[0].main + "</h4>"
+    $("#location").html(html);
   })
 }
