@@ -21,7 +21,7 @@ div {
 }
 
 div h1 {
-  color: #ECE59A;
+  color: #FD6E8A;
   font-size: 3em;
 }
 
@@ -37,4 +37,13 @@ div h1 {
   background-color: #2C3B63;
   margin: 0;
   padding: 0 !important;
+}
+
+#location h3 {
+  color: #ECE59A;
+}
+
+div#icon {
+  filter: grayscale(100);
+  padding-top: 0;
 }
