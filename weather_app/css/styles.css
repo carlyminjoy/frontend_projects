@@ -49,3 +49,7 @@ div#icon {
   filter: grayscale(100);
   padding-top: 0;
 }
+
+#toggle {
+  margin-bottom: 20px;
+}
