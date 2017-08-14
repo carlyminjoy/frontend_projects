@@ -10,30 +10,45 @@
 
   <body>
 
+    <!-- Wrapper container displaying background image -->
     <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-md-6 container">
+      <div class="row">
+
+        <!-- Main app container -->
+        <div class="col-lg-4 col-md-6 col-sm-8 container">
+
           <div id="headline">
             <h1>Rainy or shiny?</h1>
           </div>
+
+          <!-- Holds location information retrieved by js -->
           <p>Where are ya?</p>
           <div id="location">
           </div>
+
+          <!-- Holds temperature information retrieved by js -->
           <p>Hot or cold?</p>
           <div id="temp">
           </div>
+
+          <!-- Toggle button to convert celsius & fahrenheit -->
           <button class ="btn" id="toggle">
-            Switch
           </button>
-          <p>View from the window today: <br></p>
+
+          <!-- Holds weather condition information retrieved by js -->
+          <p>View from the window today: </p>
           <div id="weather">
           </div>
+
+          <!-- Weather icon based on retrieved weather conditions -->
           <div id="icon">
           </div>
+
         </div>
       </div>
     </div>
 
+    <!-- Imports jQuery, bootstrap & custom js code  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
