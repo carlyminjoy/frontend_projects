@@ -12,9 +12,9 @@ body,
 
 /* Container for background image */
 .container-fluid {
-  background-color: rgba(132, 141, 130, 0.5);
   padding: 0 !important;
   margin: 0;
+  background-size: cover;
 }
 
  /* Main app container */
