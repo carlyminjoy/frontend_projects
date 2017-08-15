@@ -96,7 +96,7 @@ function displayIcon(icon) {
 
 // retrieve weather information
 function getWeather(lon, lat) {
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02a18b37174cc92c4fc&lat=-27.3944245&lon=153.074884&lat="+ lat + "&lon=" + lon,
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02a18b37174cc92c4fc&lat=-27.3944245&lon=153.074884&lat="+ lat + "&lon=" + lon,
   function(data) {
     // set location variable to user's city
     var location = data.name;
