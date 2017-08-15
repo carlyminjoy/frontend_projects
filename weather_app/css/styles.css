@@ -77,12 +77,20 @@ div#icon {
       height: 100%;
     }
     .container {
-      flex: 0 0 100% !important;
-      max-width: 100% !important;
       margin-top: 10px;
       background: none;
     }
-    p {
+    p, button {
       color: #fff;
+    }
+
+    div h1 {
+      font-size: 2em !important;
+    }
+
+    #location,
+    #weather,
+    #temp h3 {
+      font-size: 1.5em !important;
     }
 }
