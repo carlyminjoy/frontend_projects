@@ -12,15 +12,24 @@ body, input {
   font-size: 18px;
   line-spacing: 18px; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  color: #e70f5b; }
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
-.search {
-  display: flex;
+.search, form {
   width: 100%; }
+
+form {
+  display: flex; }
 
 .search input {
   padding: 4.5px; }

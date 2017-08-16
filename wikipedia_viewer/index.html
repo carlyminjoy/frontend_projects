@@ -10,11 +10,15 @@
     <div class="container">
       <div class="container content">
         <div class="random">
-          <h2><a class="random-url">Click for random article..</a></h2>
+          <a class="random-url" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
+            <h2>Click for random article..</h2>
+          </a>
         </div>
         <div class="search">
-          <input class="search-box" type="search" placeholder=".. Or search here">
-          <input class="submit-btn" type="submit" value="Go!">
+          <form>
+            <input class="form-group search-box" type="search" placeholder=".. Or search here">
+            <input class="form-group submit-btn" type="submit" value="Go!">
+          </form>
         </div>
       </div>
 
@@ -22,6 +26,8 @@
       </div>
     </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
   </body>
 
 </html>

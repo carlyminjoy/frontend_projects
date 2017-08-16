@@ -1,5 +1,6 @@
 $font-stack: Helvetica, sans-serif;
 $font-size: 18px;
+
 $color-base: #27ce93;
 $color-bg: lighten($color-base, 40);
 $color-darken: darken($color-base, 20);
@@ -23,6 +24,15 @@ body, input {
   line-spacing: $font-size;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: $color-accent;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -30,9 +40,12 @@ body, input {
   align-items: center;
 }
 
-.search {
-  display: flex;
+.search, form {
   width: 100%;
+}
+
+form {
+  display: flex;
 }
 
 .search input {

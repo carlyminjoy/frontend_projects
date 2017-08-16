@@ -1,7 +1,7 @@
-function randomArticle() {
-
+function openRandomArticle() {
+  window.open("https://en.wikipedia.org/wiki/Special:Random")
 }
 
-function searchArticle() {
-  
-}
+$("form").submit(function() {
+  $(".results").html("<p>RESULTS</p>");
+})
