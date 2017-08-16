@@ -43,17 +43,18 @@ body, input {
   background: $color-accent;
   flex-grow: 1;
   margin-left: $font-size / 2;
+  color: $color-bg;
 }
 
 .search-box {
   flex-grow: 5;
+  color: $color-accent;
 }
 
 .submit-btn,
 .search-box {
   border: $border;
   border-radius: 5px;
-  color: $color-bg;
 }
 
 .submit-btn:hover {
