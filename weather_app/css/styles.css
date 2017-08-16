@@ -1,4 +1,5 @@
 /* Setup full-screen background & default settings*/
+/* Set smaller device width to actual width*/
 @-ms-viewport{
   width: device-width;
 }

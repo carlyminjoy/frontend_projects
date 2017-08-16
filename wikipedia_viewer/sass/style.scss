@@ -1,0 +1,62 @@
+$font-stack: Helvetica, sans-serif;
+$font-size: 18px;
+$color-base: #27ce93;
+$color-bg: lighten($color-base, 40);
+$color-darken: darken($color-base, 20);
+$color-accent: saturate(adjust-color($color-base, $hue:180), 20);
+$border: 2px solid $color-darken;
+
+body, html, .container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-stack;
+  color: $color-base;
+  background: $color-bg;
+}
+
+body, input {
+  font-size: $font-size;
+  line-spacing: $font-size;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+}
+
+.search input {
+  padding: $font-size / 4;
+}
+
+.submit-btn {
+  background: $color-accent;
+  flex-grow: 1;
+  margin-left: $font-size / 2;
+}
+
+.search-box {
+  flex-grow: 5;
+}
+
+.submit-btn,
+.search-box {
+  border: $border;
+  border-radius: 5px;
+  color: $color-bg;
+}
+
+.submit-btn:hover {
+  background: $color-bg;
+  color: $color-accent;
+}

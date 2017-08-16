@@ -1,0 +1,7 @@
+function randomArticle() {
+
+}
+
+function searchArticle() {
+  
+}
