@@ -1,6 +1,11 @@
 var quote = "";
 var author = "";
 
+function getQuote() {
+  $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
+  .done(update);
+}
+
 function update(response) {
   quote = response.quoteText;
   author = response.quoteAuthor;
@@ -14,14 +19,9 @@ $("#get-quote").click(function() {
 });
 
 $("#tweet").click(function() {
-  window.open('http://twitter.com/share?text="' + quote.replace(";", ". ") + '" - ' + author);
+  window.open("http://twitter.com/share?text=" + quote.replace(";", ". ") + "- " + author);
 });
-
-function getQuote() {
-  $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
-  .done(update);
-}
 
 $(document).ready(function () {
   getQuote();
-})
+});
