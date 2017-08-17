@@ -1,55 +1,21 @@
 // VARIABLES
-
 // initialise temperature variable
 var temp = 0;
-
 // intialise default temperature to fahrenheit
 var fah = true;
-
 // button text depending on fahrenheit/celsius
 var btnFar = "Switch to &deg;C";
 var btnCel = "Switch to &deg;F";
 
-
-// TO EXECUTE AS SOON AS PAGE LOADS
-
-// if location services enabled, get user's location
-$(document).ready(function() {
-  if (navigator.geolocation) {
-    getWeather(getLocation());
-  }
-  // initialise button text, set to default (fahrenheit)
-  $("#toggle").html(btnFar);
-});
-
-
 // FUNCTIONS
-
-/**
- * Button function to toggle between celsius to fahrenheit
- */
-$('#toggle').click(function() {
-  if (fah) {
-    temp = fahToCel(temp);
-    displayTemp(temp, 'C');
-    fah = false;
-    $("#toggle").html(btnCel);
-  } else {
-    temp = celToFah(temp);
-    displayTemp(temp, 'F');
-    fah = true;
-    $("#toggle").html(btnFar);
-  }
-})
-
 /**
  * Retrieves user's coordinates and calls getWeather()
  * to obtain weather data from API
  */
 function getLocation() {
   navigator.geolocation.getCurrentPosition(function(position) {
-    lon = position.coords.longitude;
-    lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var lat = position.coords.latitude;
     return (lon, lat);
   })
 }
@@ -141,3 +107,30 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02
     displayIcon(icon);
   })
 }
+
+// TO EXECUTE AS SOON AS PAGE LOADS
+// if location services enabled, get user's location
+$(document).ready(function() {
+  if (navigator.geolocation) {
+    getWeather(getLocation());
+  }
+  // initialise button text, set to default (fahrenheit)
+  $("#toggle").html(btnFar);
+});
+
+/**
+ * Button function to toggle between celsius to fahrenheit
+ */
+$("#toggle").click(function() {
+  if (fah) {
+    temp = fahToCel(temp);
+    displayTemp(temp, 'C');
+    fah = false;
+    $("#toggle").html(btnCel);
+  } else {
+    temp = celToFah(temp);
+    displayTemp(temp, 'F');
+    fah = true;
+    $("#toggle").html(btnFar);
+  }
+});
