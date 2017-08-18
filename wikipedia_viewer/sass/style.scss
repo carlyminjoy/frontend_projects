@@ -1,13 +1,15 @@
+// VARIABLES
+// Font defaults
 $font-stack: Helvetica, sans-serif;
 $font-size: 18px;
-
+// Color defaults
 $color-base: #27ce93;
 $color-bg: lighten($color-base, 40);
 $color-darken: darken($color-base, 20);
 $color-accent: saturate(adjust-color($color-base, $hue:180), 20);
-// $border: 2px solid $color-darken;
 $border: none;
 
+// Element styles
 body, html, .container {
   min-height: 100%;
   padding: 0;
@@ -34,6 +36,7 @@ a:hover {
   color: $color-accent;
 }
 
+// Layout
 .container {
   display: flex;
   flex-direction: column;
@@ -46,6 +49,7 @@ a:hover {
   margin-bottom: 2 * $font-size;
 }
 
+// Form styles
 .search, form {
   width: 100%;
 }
@@ -70,7 +74,8 @@ form {
   color: $color-accent;
 }
 
-.search-box:focus {
+.search-box:focus,
+.submit-btn:focus {
   outline-color: $color-darken;
 }
 
@@ -82,9 +87,9 @@ form {
 
 .submit-btn:hover {
   background: $color-base;
-  // color: $color-accent;
 }
 
+// Results generated from jQuery: div styles
 .results {
   margin-top: 2 * $font-size;
   margin-bottom: 2 * $font-size;
@@ -110,6 +115,7 @@ form {
   color: white;
 }
 
+// Responsive design for smaller devices
 @media (max-width: 599px) {
   .results div {
     width: 80%;
