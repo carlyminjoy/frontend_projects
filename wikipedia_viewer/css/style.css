@@ -92,7 +92,8 @@ form {
     padding: 5%;
     margin-bottom: 0; }
 
-  .random-url h2 {
+  .random-url h2,
+  .search {
     text-align: center; }
 
   .results a {
