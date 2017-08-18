@@ -3,6 +3,7 @@ function openRandomArticle() {
 }
 
 $("form").submit(function() {
+  $(".results").empty();
   var input = $(".search-box").val();
   var url = "https://en.wikipedia.org/w/api.php?action=opensearch&limit=10&namespace=0&format=json&search=" + input + "&origin=*";
 
