@@ -117,25 +117,28 @@ form {
 
 // Responsive design for smaller devices
 @media (max-width: 599px) {
-  .results div,
-  .content div {
-    width: 80%;
-    margin: 5%;
+  div.main {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .content {
     padding: 5%;
+    margin-bottom: 0;
+    text-align: center;
   }
 
   .results a {
     width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  div.main, div.results {
-    padding: 0;
-    margin: 0;
   }
 
   div.results {
     margin-bottom: $font-size;
+  }
+
+  .results div {
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
   }
 }
