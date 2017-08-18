@@ -82,7 +82,8 @@ form {
   color: white; }
 
 @media (max-width: 599px) {
-  .results div {
+  .results div,
+  .content div {
     width: 80%;
     margin: 5%;
     padding: 5%; }
