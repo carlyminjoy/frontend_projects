@@ -8,13 +8,21 @@ $("form").submit(function() {
   var url = "https://en.wikipedia.org/w/api.php?action=opensearch&limit=10&namespace=0&format=json&search=" + input + "&origin=*";
 
   $.getJSON(url, function(data) {
-    console.log(url);
-    for (var i = 0; i < 5; i++) {
+    if (data[1].length == 0) {
       $(".results").append(
-          "<a href=" + data[3][i] + " target='_blank'>" +
-          "<div>" +
-          "<h3>" + data[1][i] + "</h3>" +
-          "<p>" + data[2][i] + "</p></div></a>" )
+        "<h4>No matches.</h4>" );
+    } else {
+      for (var i = 0; i < 5; i++) {
+        var link = data[3][i];
+        var title = data[1][i];
+        var blurb = data[2][i];
+
+        $(".results").append(
+            "<a href=" + link + " target='_blank'>" +
+            "<div>" +
+            "<h3>" + title + "</h3>" +
+            "<p>" + blurb + "</p></div></a>" );
+        }
     };
   })
 
