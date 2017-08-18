@@ -48,7 +48,8 @@ form {
   flex-grow: 5;
   color: #e70f5b; }
 
-.search-box:focus {
+.search-box:focus,
+.submit-btn:focus {
   outline-color: #177856; }
 
 .submit-btn,
