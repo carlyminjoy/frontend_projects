@@ -95,8 +95,13 @@ form {
   .random-url h2 {
     text-align: center; }
 
+  form {
+    flex-direction: column;
+    align-items: center; }
+
   .submit-btn {
-    margin-left: 0; }
+    margin-left: 0;
+    margin-top: 18px; }
 
   .submit-btn,
   .search-box {
