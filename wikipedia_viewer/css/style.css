@@ -26,7 +26,8 @@ a:hover {
   align-items: center; }
 
 .content {
-  margin-top: 36px; }
+  margin-top: 36px;
+  margin-bottom: 36px; }
 
 .search, form {
   width: 100%; }
@@ -81,6 +82,20 @@ form {
 
 @media (max-width: 599px) {
   .results div {
-    width: 100%; } }
+    width: 80%;
+    margin: 5%;
+    padding: 5%; }
+
+  .results a {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+
+  div.main, div.results {
+    padding: 0;
+    margin: 0; }
+
+  div.results {
+    margin-bottom: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
