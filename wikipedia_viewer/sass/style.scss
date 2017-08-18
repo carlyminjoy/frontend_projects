@@ -7,6 +7,7 @@ $color-base: #27ce93;
 $color-bg: lighten($color-base, 40);
 $color-darken: darken($color-base, 20);
 $color-accent: saturate(adjust-color($color-base, $hue:180), 20);
+$border-radius: 5px;
 $border: none;
 
 // Element styles
@@ -82,7 +83,7 @@ form {
 .submit-btn,
 .search-box {
   border: $border;
-  border-radius: 5px;
+  border-radius: $border-radius;
 }
 
 .submit-btn:hover {
@@ -100,7 +101,7 @@ form {
 
 .results div {
   width: 600px;
-  border-radius: 5px;
+  border-radius: $border-radius;
   color: $color-bg;
   background: $color-darken;
   padding: $font-size;
@@ -117,6 +118,8 @@ form {
 
 // Responsive design for smaller devices
 @media (max-width: 599px) {
+  $border-radius: 2px;
+
   div.main {
     margin: 0 auto;
     padding: 0;
