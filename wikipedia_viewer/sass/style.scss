@@ -5,10 +5,11 @@ $color-base: #27ce93;
 $color-bg: lighten($color-base, 40);
 $color-darken: darken($color-base, 20);
 $color-accent: saturate(adjust-color($color-base, $hue:180), 20);
-$border: 2px solid $color-darken;
+// $border: 2px solid $color-darken;
+$border: none;
 
 body, html, .container {
-  height: 100%;
+  min-height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -40,6 +41,10 @@ a:hover {
   align-items: center;
 }
 
+.content {
+  margin-top: 2 * $font-size;
+}
+
 .search, form {
   width: 100%;
 }
@@ -49,7 +54,7 @@ form {
 }
 
 .search input {
-  padding: $font-size / 4;
+  padding: $font-size / 2;
 }
 
 .submit-btn {
@@ -64,6 +69,10 @@ form {
   color: $color-accent;
 }
 
+.search-box:focus {
+  outline-color: $color-darken;
+}
+
 .submit-btn,
 .search-box {
   border: $border;
@@ -71,6 +80,35 @@ form {
 }
 
 .submit-btn:hover {
-  background: $color-bg;
-  color: $color-accent;
+  background: $color-base;
+  // color: $color-accent;
+}
+
+.results {
+  margin-top: 2 * $font-size;
+  margin-bottom: 2 * $font-size;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.results div {
+  width: 600px;
+  border-radius: 5px;
+  color: $color-bg;
+  background: $color-darken;
+  padding: $font-size;
+  margin: $font-size;
+}
+
+.results div:hover {
+  background: $color-accent;
+}
+
+.results div p {
+  color: white;
+}
+
+@media (max-width: 599px) {
+  .results div { width: 100%;}
 }
