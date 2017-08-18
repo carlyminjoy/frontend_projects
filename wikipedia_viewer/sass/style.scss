@@ -43,6 +43,7 @@ a:hover {
 
 .content {
   margin-top: 2 * $font-size;
+  margin-bottom: 2 * $font-size;
 }
 
 .search, form {
@@ -110,5 +111,24 @@ form {
 }
 
 @media (max-width: 599px) {
-  .results div { width: 100%;}
+  .results div {
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
+  }
+
+  .results a {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  div.main, div.results {
+    padding: 0;
+    margin: 0;
+  }
+
+  div.results {
+    margin-bottom: $font-size;
+  }
 }
