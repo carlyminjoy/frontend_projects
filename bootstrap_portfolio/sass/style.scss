@@ -1,0 +1,128 @@
+// VARIABLES
+$base: #e1e8f0;
+$background: #e62739;
+
+/* ELEMENT STYLES */
+body {
+  background-color: $base;
+}
+
+button {
+  color: $base;
+  background: $background;
+}
+
+button:hover {
+  background: $base;
+  color: $background;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $background;
+}
+
+img {
+  filter: grayscale(100%);
+  border: 2px solid #6ed3cf;
+}
+
+/* CUSTOM CLASSES */
+
+#main-content {
+  max-width: 1000px;
+  background-color: #fff;
+}
+
+#about {
+  background-color: #fff;
+}
+
+#portfolio {
+  background-color: #677077;
+  color: $base;
+}
+
+#contact {
+  background-color: #fff;
+}
+
+#about-section {
+  background-color: #677077;
+  color: $base;
+}
+
+#msg {
+  padding-bottom: 150px;
+}
+
+#submit {
+  background-color: #6ed3cf;
+  color: #fff;
+}
+
+#submit:hover {
+  background-color: $background;
+  color: #fff;
+}
+
+#footer {
+  background-color: black;
+  color: $base;
+}
+
+.blue {
+  color: #6ed3cf;
+}
+
+.fa {
+  font-size: 2em !important;
+}
+
+/* BOOTSTRAP CLASSES  */
+.navbar {
+  background-color: $background;
+}
+
+.nav-container {
+  max-width: 1000px;
+}
+
+.form-group input {
+  border: none;
+  line-height: 2;
+  font-size: 1.5em;
+}
+
+.form-group .form-control {
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+/* MEDIA QUERIES  */
+@media (max-width: 767px)
+{
+  .sm-ctr {
+    text-align: center;
+    nav {
+      justify-content: center !important;
+    }
+  }
+  
+  button.nav-item {
+    padding: 2px !important;
+  }
+
+  .navbar h1 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 595px) {
+  #about-section {
+    padding-bottom: 48px;
+  }
+}

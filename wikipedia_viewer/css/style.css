@@ -1,4 +1,8 @@
-body, html, .container {
+.submit-btn, .search-box {
+  border: none;
+  border-radius: 5px; }
+
+html, body, .container {
   min-height: 100%;
   padding: 0;
   margin: 0; }
@@ -52,11 +56,6 @@ form {
 .submit-btn:focus {
   outline-color: #177856; }
 
-.submit-btn,
-.search-box {
-  border: none;
-  border-radius: 5px; }
-
 .submit-btn:hover {
   background: #27ce93; }
 
@@ -66,20 +65,17 @@ form {
   display: flex;
   flex-direction: column;
   text-align: justify; }
-
-.results div {
-  width: 600px;
-  border-radius: 5px;
-  color: #ccf5e7;
-  background: #177856;
-  padding: 18px;
-  margin: 18px; }
-
-.results div:hover {
-  background: #e70f5b; }
-
-.results div p {
-  color: white; }
+  .results div {
+    width: 600px;
+    border-radius: 5px;
+    color: #ccf5e7;
+    background: #177856;
+    padding: 18px;
+    margin: 18px; }
+    .results div p {
+      color: white; }
+  .results div:hover {
+    background: #e70f5b; }
 
 @media (max-width: 599px) {
   div.main {
@@ -107,15 +103,14 @@ form {
   .search-box {
     border-radius: 2px; }
 
-  .results a {
-    width: 100%; }
-
   div.results {
     margin-bottom: 18px; }
 
   .results div {
     width: 80%;
     margin: 5%;
-    padding: 5%; } }
+    padding: 5%; }
+  .results a {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

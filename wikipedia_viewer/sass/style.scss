@@ -10,14 +10,25 @@ $color-accent: saturate(adjust-color($color-base, $hue:180), 20);
 $border-radius: 5px;
 $border: none;
 
-// Element styles
-body, html, .container {
+// Extensions
+%border {
+  border: $border;
+  border-radius: $border-radius;
+}
+
+%fullscreen {
   min-height: 100%;
   padding: 0;
   margin: 0;
 }
 
+// Element styles
+html {
+  @extend %fullscreen;
+}
+
 body {
+  @extend %fullscreen;
   font-family: $font-stack;
   color: $color-base;
   background: $color-bg;
@@ -39,6 +50,7 @@ a:hover {
 
 // Layout
 .container {
+  @extend %fullscreen;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,6 +76,7 @@ form {
 }
 
 .submit-btn {
+  @extend %border;
   background: $color-accent;
   flex-grow: 1;
   margin-left: $font-size / 2;
@@ -71,6 +84,7 @@ form {
 }
 
 .search-box {
+  @extend %border;
   flex-grow: 5;
   color: $color-accent;
 }
@@ -78,12 +92,6 @@ form {
 .search-box:focus,
 .submit-btn:focus {
   outline-color: $color-darken;
-}
-
-.submit-btn,
-.search-box {
-  border: $border;
-  border-radius: $border-radius;
 }
 
 .submit-btn:hover {
@@ -97,23 +105,20 @@ form {
   display: flex;
   flex-direction: column;
   text-align: justify;
-}
-
-.results div {
-  width: 600px;
-  border-radius: $border-radius;
-  color: $color-bg;
-  background: $color-darken;
-  padding: $font-size;
-  margin: $font-size;
-}
-
-.results div:hover {
-  background: $color-accent;
-}
-
-.results div p {
-  color: white;
+  div {
+    width: 600px;
+    border-radius: $border-radius;
+    color: $color-bg;
+    background: $color-darken;
+    padding: $font-size;
+    margin: $font-size;
+    p {
+      color: white;
+    }
+  }
+  div:hover {
+    background: $color-accent;
+  }
 }
 
 // Responsive design for smaller devices
@@ -149,17 +154,18 @@ form {
     border-radius: 2px;
   }
 
-  .results a {
-    width: 100%;
-  }
-
   div.results {
     margin-bottom: $font-size;
   }
 
-  .results div {
+  .results {
+    div {
     width: 80%;
     margin: 5%;
     padding: 5%;
+    }
+    a {
+      width: 100%;
+    }
   }
 }
