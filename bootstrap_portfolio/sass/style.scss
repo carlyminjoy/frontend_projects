@@ -78,8 +78,9 @@ img {
   color: #6ed3cf;
 }
 
-.fa {
-  font-size: 2em !important;
+a.fa,
+p.fa {
+  font-size: 2em;
 }
 
 /* BOOTSTRAP CLASSES  */
@@ -108,12 +109,12 @@ img {
   .sm-ctr {
     text-align: center;
     nav {
-      justify-content: center !important;
+      justify-content: center;
     }
   }
-  
+
   button.nav-item {
-    padding: 2px !important;
+    padding: 2px;
   }
 
   .navbar h1 {

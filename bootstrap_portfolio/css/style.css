@@ -57,8 +57,9 @@ img {
 .blue {
   color: #6ed3cf; }
 
-.fa {
-  font-size: 2em !important; }
+a.fa,
+p.fa {
+  font-size: 2em; }
 
 /* BOOTSTRAP CLASSES  */
 .navbar {
@@ -81,10 +82,10 @@ img {
   .sm-ctr {
     text-align: center; }
     .sm-ctr nav {
-      justify-content: center !important; }
+      justify-content: center; }
 
   button.nav-item {
-    padding: 2px !important; }
+    padding: 2px; }
 
   .navbar h1 {
     font-size: 1.25em; } }
