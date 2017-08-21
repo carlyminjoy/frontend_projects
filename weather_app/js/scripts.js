@@ -17,7 +17,7 @@ function getLocation() {
     var lon = position.coords.longitude;
     var lat = position.coords.latitude;
     return (lon, lat);
-  })
+  });
 }
 
 /**
@@ -102,7 +102,7 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02
 
     // display weather information to user
     displayLocation(location);
-    displayTemp(temp, 'F');
+    displayTemp(temp, "F");
     displayCondition(condition);
     displayIcon(icon);
   })
@@ -124,12 +124,12 @@ $(document).ready(function() {
 $("#toggle").click(function() {
   if (fah) {
     temp = fahToCel(temp);
-    displayTemp(temp, 'C');
+    displayTemp(temp, "C");
     fah = false;
     $("#toggle").html(btnCel);
   } else {
     temp = celToFah(temp);
-    displayTemp(temp, 'F');
+    displayTemp(temp, "F");
     fah = true;
     $("#toggle").html(btnFar);
   }
