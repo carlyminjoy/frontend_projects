@@ -105,7 +105,7 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?APPID=dc6b443deceda02
     displayTemp(temp, "F");
     displayCondition(condition);
     displayIcon(icon);
-  })
+  });
 }
 
 // TO EXECUTE AS SOON AS PAGE LOADS
