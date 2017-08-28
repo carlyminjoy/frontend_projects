@@ -11,17 +11,20 @@ var twitchUsers = { 'freecodecamp': 79776140, 'esl_sc2': 30220059,
 var streamsURL = "https://wind-bow.gomix.me/twitch-api/streams/"
 var callback = "?callback=?";
 
+function getUserDetails(user) {
+  $.getJSON(streamsURL + user + callback, function(stream) {
+    if (stream.stream) {
+      $(".channels").append("<p>" + user + twitchUsers[user] + "Live.</p>")
+    } else {
+      $(".channels").append("<p>" + user + twitchUsers[user] + "Offline.</p>")
+    }
+  });
+}
+
 $(document).ready(function() {
   for (var user in twitchUsers) {
-
-    $.getJSON(streamsURL + twitchUsers[user] + callback, function(stream) {
-      if (stream.stream) {
-
-      } else {
-        $(".channels").append("<p>" + user + twitchUsers[user] + "Offline.</p>")
-      }
-    });
-
+    getUserDetails(user);
+  };
     // var id        = 0;
     // var username  = "";
     // var string    = "";
@@ -41,5 +44,4 @@ $(document).ready(function() {
     //   };
     //   $(".channels").append("<p>" + string + "</p>");
     // });
-  };
 });
