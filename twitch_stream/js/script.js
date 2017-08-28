@@ -1,17 +1,17 @@
-var twitchUsers = { 'freecodecamp': 79776140, 'esl_sc2': 30220059,
-                    'storbeck': 152475255, 'ogamingsc2': 71852806,
-                    'habathcx': 6726509, 'cretetion': 90401618,
-                    'noobs2ninjas': 82534701, 'robotcaleb': 54925078 };
+var twitchUsers = { "freecodecamp": 79776140, "esl_sc2": 30220059,
+                    "storbeck": 152475255, "ogamingsc2": 71852806,
+                    "habathcx": 6726509, "cretetion": 90401618,
+                    "noobs2ninjas": 82534701, "robotcaleb": 54925078 };
 
-var streamsURL = "https://wind-bow.gomix.me/twitch-api/streams/"
+var streamsURL = "https://wind-bow.gomix.me/twitch-api/streams/";
 var callback = "?callback=?";
 
-$('button.live').click(function() {
-  $('div.offline').fadeOut(500);
+$("button.live").click(function() {
+  $("div.offline").fadeOut(500);
 });
 
-$('button.all').click(function() {
-  $('div.offline').fadeIn(500);
+$("button.all").click(function() {
+  $("div.offline").fadeIn(500);
 });
 
 function getStream(user) {
@@ -27,7 +27,9 @@ function getStream(user) {
 }
 
 $(document).ready(function() {
-  for (var user in twitchUsers) {
-    getStream(user);
-  };
+  if (true) {
+    for (var user in twitchUsers) {
+      getStream(user);
+    }
+  }
 });
