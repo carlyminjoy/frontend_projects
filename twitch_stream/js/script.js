@@ -6,12 +6,19 @@ var twitchUsers = { 'freecodecamp': 79776140, 'esl_sc2': 30220059,
 var streamsURL = "https://wind-bow.gomix.me/twitch-api/streams/"
 var callback = "?callback=?";
 
+$('button.live').click(function() {
+  $('div.offline').fadeOut(500);
+});
+
+$('button.all').click(function() {
+  $('div.offline').fadeIn(500);
+});
+
 function getStream(user) {
   $.getJSON(streamsURL + user + callback, function(stream) {
     if (stream.stream) {
-      $(".channels").append("<a href='"+stream.stream.channel.url+"' target=_'blank'><div class='live'><h3>" + user + "</h3>" +
+      $(".channels").append("<a href='"+stream.stream.channel.url+"' target=_'blank'><div class='online'><h3>" + user + "</h3>" +
                             "<p>" + stream.stream.game + "</p></div></a>");
-
     } else {
       $(".channels").append("<div class='offline'><h3>" + user + "</h3>" +
                             "<p>Offline</p></div>");
