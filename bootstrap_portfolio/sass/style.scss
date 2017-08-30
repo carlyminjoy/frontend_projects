@@ -25,10 +25,12 @@ a:hover {
   color: $background;
 }
 
-img {
+img.rounded-circle {
   filter: grayscale(100%);
   border: 2px solid #6ed3cf;
 }
+
+img {border: 2px solid #6ed3cf;}
 
 /* CUSTOM CLASSES */
 
@@ -62,6 +64,7 @@ img {
 #submit {
   background-color: #6ed3cf;
   color: #fff;
+  padding: 0.5rem;
 }
 
 #submit:hover {
