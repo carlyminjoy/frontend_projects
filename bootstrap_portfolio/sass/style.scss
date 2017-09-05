@@ -46,6 +46,9 @@ img {border: 2px solid #6ed3cf;}
 #portfolio {
   background-color: #677077;
   color: $base;
+  div p {
+    margin-top: 1rem;
+  }
 }
 
 #contact {
@@ -87,9 +90,6 @@ p.fa {
 }
 
 div .skills {
-  :nth-element(2) {
-    background: $background;
-  }
   background: $base;
 }
 

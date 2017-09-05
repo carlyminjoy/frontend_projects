@@ -34,6 +34,8 @@ img {
 #portfolio {
   background-color: #677077;
   color: #e1e8f0; }
+  #portfolio div p {
+    margin-top: 1rem; }
 
 #contact {
   background-color: #fff; }
@@ -67,8 +69,6 @@ p.fa {
 
 div .skills {
   background: #e1e8f0; }
-  div .skills :nth(2) {
-    background: #e62739; }
 
 /* BOOTSTRAP CLASSES  */
 .navbar {
