@@ -1,7 +1,5 @@
-var twitchUsers = { "freecodecamp": 79776140, "esl_sc2": 30220059,
-                    "storbeck": 152475255, "ogamingsc2": 71852806,
-                    "habathcx": 6726509, "cretetion": 90401618,
-                    "noobs2ninjas": 82534701, "robotcaleb": 54925078 };
+var twitchUsers = [ 'freecodecamp', 'esl_sc2', 'storbeck', 'ogamingsc2', 'habathcx',
+                  'cretetion', 'noobs2ninjas', 'robotcaleb'];
 
 var streamsURL = "https://wind-bow.gomix.me/twitch-api/streams/";
 var callback = "?callback=?";
@@ -15,12 +13,13 @@ $("button.all").click(function() {
 });
 
 function getStream(user) {
-  $.getJSON(streamsURL + user + callback, function(stream) {
+  $.getJSON(streamsURL + twitchUsers[user] + callback, function(stream) {
     if (stream.stream) {
-      $(".channels").append("<a href='"+stream.stream.channel.url+"' target=_'blank'><div class='online'><h3>" + user + "</h3>" +
+      $(".channels").append("<a href='"+stream.stream.channel.url+"' target=_'blank'><div class='online'><h3>" +
+                            twitchUsers[user] + "</h3>" +
                             "<p>" + stream.stream.game + "</p></div></a>");
     } else {
-      $(".channels").append("<div class='offline'><h3>" + user + "</h3>" +
+      $(".channels").append("<div class='offline'><h3>" + twitchUsers[user] + "</h3>" +
                             "<p>Offline</p></div>");
     }
   });
