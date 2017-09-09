@@ -1,0 +1,79 @@
+$base: #43e8b3;
+$bg: #e5e5e5;
+$lighten: lighten($base, 20);
+$complement: saturate(adjust-color($base, $hue:180), 40);
+$complement-lighten: lighten($complement, 20);
+$darken: darken($complement, 20);
+$font: sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: $bg;
+  font-family: $font;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+  h1 {
+    margin-top: 1rem;
+  }
+}
+
+.calculator {
+  width: 300px;
+  height: 400px;
+  padding: 1rem;
+  background: $base;
+  border-radius: 10px;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .screen {
+    margin: 1rem 0.5rem;
+    background: black;
+    color: white;
+    line-height: 2.5rem;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    text-align: right;
+    height: 6rem;
+    p {
+      margin-right: 1rem;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .button {
+      background: $complement;
+      line-height: 3rem;
+      display: flex;
+      flex-grow: 1;
+      width: 20%;
+      align-content: space-between;
+      margin: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border-radius: 5px;
+      font-size: 1.5rem;
+    }
+    .button:hover {
+      background: $complement-lighten;
+    }
+  }
+}
