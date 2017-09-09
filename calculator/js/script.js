@@ -1,15 +1,12 @@
-var digit      = "";
-var currentNum = "";
-var operation  = false;
-var operator   = null;
-var result = null;
+var digit, currentNum   = "";
+var operation, finished = false;
+var operator, result    = null;
 
-function clear(digit) {
-  digit = "";
-  currentNum = "";
-  operator = null;
-  operation = false;
-  result = 0;
+function clear() {
+  digit, currentNum   = "";
+  operator            = null;
+  operation, finished = false;
+  result              = 0;
   updateScreen("");
 }
 
@@ -34,13 +31,13 @@ function divide(num) {
 }
 
 function performOperation(op) {
-  if (op.toString().includes('+')) {
+  if (equals(op, '+')) {
     add(currentNum);
-  } else if (op.toString().includes('-')) {
+  } else if (equals(op, '-')) {
     subtract(currentNum);
-  } else if (op.toString().includes('*')) {
+  } else if (equals(op, '*')) {
     multiply(currentNum);
-  } else if (op.toString().includes('%')) {
+  } else if (equals(op, '%')) {
     divide(currentNum);
   }
 }
@@ -55,12 +52,20 @@ function updateScreen(display) {
   $('.output').html(display);
 }
 
+function equals(v, s) {
+  return v.toString().includes(s);
+}
+
 $('.button').click(function() {
+    if (finished) {
+      clear();
+    }
+
     digit =  this.innerHTML;
 
     if (!parseInt(digit)) {
-        if (digit.toString().includes('CE')) {
-          clear(digit); }
+        if (equals(digit, '='))   { finished = true; }
+        if (equals(digit, 'CE'))  { clear(); }
         else {
             if (!result) { result = parseInt(currentNum); }
             if (operation) {
