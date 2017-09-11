@@ -11,22 +11,22 @@ function clear() {
 }
 
 function add(num) {
-  result += parseInt(num);
+  result += parseFloat(num);
   updateScreen(result.toString());
 }
 
 function subtract(num) {
-  result -= parseInt(num);
+  result -= parseFloat(num);
   updateScreen(result.toString());
 }
 
 function multiply(num) {
-  result *= parseInt(num);
+  result *= parseFloat(num);
   updateScreen(result.toString());
 }
 
 function divide(num) {
-  result /= parseInt(num);
+  result /= parseFloat(num);
   updateScreen(result.toString());
 }
 
@@ -56,6 +56,14 @@ function equals(v, s) {
   return v.toString().includes(s);
 }
 
+function updateNum(num) {
+  currentNum +=  parseFloat(num).toString();
+}
+
+function addDecimal() {
+  currentNum += '.';
+}
+
 $('.button').click(function() {
     if (finished) {
       clear();
@@ -63,11 +71,15 @@ $('.button').click(function() {
 
     digit =  this.innerHTML;
 
-    if (!parseInt(digit)) {
+    if (!parseFloat(digit)) {
         if (equals(digit, '='))   { finished = true; }
         if (equals(digit, 'CE'))  { clear(); }
+        if (equals(digit, '.'))   {
+          addDecimal();
+          updateScreen();
+        }
         else {
-            if (!result) { result = parseInt(currentNum); }
+            if (!result) { result = parseFloat(currentNum); }
             if (operation) {
               performOperation(operator);
               operator  = digit;
@@ -75,7 +87,7 @@ $('.button').click(function() {
             else { addOperator(digit); }
         }
     } else {
-        currentNum +=  parseInt(digit).toString();
+        updateNum(digit);
         updateScreen(currentNum);
     }
 });

@@ -9,8 +9,8 @@ html, body, .container {
 
 body {
   font-family: Helvetica, sans-serif;
-  color: #27ce93;
-  background: #ccf5e7; }
+  color: #4DE7B4;
+  background: #d4f9ed; }
 
 body, input {
   font-size: 18px;
@@ -21,7 +21,7 @@ a {
   color: inherit; }
 
 a:hover {
-  color: #e70f5b; }
+  color: #fb3979; }
 
 .container {
   display: flex;
@@ -43,21 +43,21 @@ form {
   padding: 9px; }
 
 .submit-btn {
-  background: #e70f5b;
+  background: #fb3979;
   flex-grow: 1;
   margin-left: 9px;
-  color: #ccf5e7; }
+  color: #d4f9ed; }
 
 .search-box {
   flex-grow: 5;
-  color: #e70f5b; }
+  color: #fb3979; }
 
 .search-box:focus,
 .submit-btn:focus {
-  outline-color: #177856; }
+  outline-color: #18b682; }
 
 .submit-btn:hover {
-  background: #27ce93; }
+  background: #4DE7B4; }
 
 .results {
   margin-top: 36px;
@@ -68,14 +68,14 @@ form {
   .results div {
     width: 600px;
     border-radius: 5px;
-    color: #ccf5e7;
-    background: #177856;
+    color: #d4f9ed;
+    background: #18b682;
     padding: 18px;
     margin: 18px; }
     .results div p {
       color: white; }
   .results div:hover {
-    background: #e70f5b; }
+    background: #fb3979; }
 
 @media (max-width: 599px) {
   div.main {

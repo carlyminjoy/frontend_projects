@@ -3,8 +3,8 @@
 $font-stack: Helvetica, sans-serif;
 $font-size: 18px;
 // Color defaults
-$color-base: #27ce93;
-$color-bg: lighten($color-base, 40);
+$color-base: #4DE7B4;
+$color-bg: lighten($color-base, 30);
 $color-darken: darken($color-base, 20);
 $color-accent: saturate(adjust-color($color-base, $hue:180), 20);
 $border-radius: 5px;
