@@ -80,6 +80,13 @@ function addDecimal() {
   updateScreen(currentNum);
 }
 
+// Adds a zero to the current num
+function addZero() {
+  currentNum += '0';
+  updateScreen(currentNum);
+  console.log('adding zero');
+}
+
 // Runs as buttons on the calculator are clicked
 $('.button').click(function() {
     if (finished) {
@@ -88,24 +95,25 @@ $('.button').click(function() {
 
     digit =  this.innerHTML;
 
-    if (!parseFloat(digit)) {
-        if (equals(digit, '='))   { finished = true; }
+    if (!parseFloat(digit) && parseFloat(digit) != 0) {
         if (equals(digit, 'AC'))  { clear(); }
-        if (equals(digit, 'CE'))  { clearEntry(); }
-        if (equals(digit, '.'))   {
-          addDecimal();
-          updateScreen();
-        }
+        else if (equals(digit, 'CE'))  { clearEntry(); }
+        else if (equals(digit, '.'))   { addDecimal(); }
         else {
+            if (equals(digit, '='))   { finished = true; }
             if (!result) { result = parseFloat(currentNum); }
             if (operation) {
               performOperation(operator);
-              operator  = digit;
+              operator   = digit;
               currentNum = ""; }
             else { addOperator(digit); }
         }
     } else {
-        updateNum(digit);
-        updateScreen(currentNum);
+        if (parseFloat(digit) == 0)   {
+            addZero();
+        } else {
+            updateNum(digit);
+            updateScreen(currentNum);
+        }
     }
 });
