@@ -54,10 +54,6 @@ var startTimer = function(mins) {
     }, 1000);
 }
 
-function hide(msg) {
-
-}
-
 $("#clock").click(function() {
     if (!currentSession) {
         session ? startTimer(sessionTime) : startTimer(breakTime);
