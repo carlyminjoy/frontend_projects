@@ -10,8 +10,10 @@ $(".session-more").click(function() {
 });
 
 $(".session-less").click(function() {
-    sessionTime--;
-    $("#session").html(sessionTime);
+    if (sessionTime >= 0) {
+        sessionTime--;
+        $("#session").html(sessionTime);
+    }
 });
 
 $(".break-more").click(function() {
@@ -20,8 +22,10 @@ $(".break-more").click(function() {
 });
 
 $(".break-less").click(function() {
-    breakTime--;
-    $("#break").html(breakTime);
+    if (breakTime >= 0) {
+        breakTime--;
+        $("#break").html(breakTime);
+    }
 });
 
 var startTimer = function(mins) {
