@@ -47,7 +47,7 @@ var startTimer = function(mins) {
             bell.play();
         }
 
-    }, 1);
+    }, 1000);
 }
 
 function hide(msg) {
