@@ -31,7 +31,12 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem; }
   .timer-buttons .plusminus {
-    color: #4de7b4; }
+    color: #4de7b4;
+    transition: all 0.8s ease; }
+  .timer-buttons .plusminus:hover {
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer; }
 
 #clock {
   width: 250px;
@@ -43,9 +48,15 @@ body {
   justify-content: center;
   align-items: center;
   color: #e74d80;
-  font-size: 2rem; }
+  font-size: 2rem;
+  transition: all 0.8s ease; }
 
-.msg {
-  display: none; }
+#clock:hover {
+  background-color: #4de7b4;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 275px;
+  height: 275px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
