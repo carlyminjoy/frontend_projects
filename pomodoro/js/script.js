@@ -10,7 +10,7 @@ $(".session-more").click(function() {
 });
 
 $(".session-less").click(function() {
-    if (sessionTime > 0) {
+    if (sessionTime > 1) {
         sessionTime--;
         $("#session").html(sessionTime);
     }
@@ -22,7 +22,7 @@ $(".break-more").click(function() {
 });
 
 $(".break-less").click(function() {
-    if (breakTime > 0) {
+    if (breakTime > 1) {
         breakTime--;
         $("#break").html(breakTime);
     }
