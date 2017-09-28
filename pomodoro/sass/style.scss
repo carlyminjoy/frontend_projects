@@ -25,31 +25,29 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.timers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-.timer-buttons {
-    padding: 0 1rem;
-    display: flex;
-    line-height: 1.5rem;
-    p {
-        font-size: 1.5rem;
-        padding: 0.5rem;
-    }
-    .plusminus {
-        color: $base;
-        transition: all 0.8s ease;
-    }
-    .plusminus:hover {
-        font-weight: bold;
-        font-size: 2rem;
-        cursor: pointer;
+    .timers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+        .timer-buttons {
+            padding: 0 1rem;
+            display: flex;
+            line-height: 1.5rem;
+            p {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+            }
+            .plusminus {
+                color: $base;
+                transition: all 0.8s ease;
+            }
+            .plusminus:hover {
+                font-weight: bold;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -74,4 +72,10 @@ body {
     width: 275px;
     height: 275px;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    timer-container {
+        padding: 2rem;
+    }
 }

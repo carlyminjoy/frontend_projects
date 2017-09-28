@@ -16,27 +16,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-
-.timers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem; }
-
-.timer-buttons {
-  padding: 0 1rem;
-  display: flex;
-  line-height: 1.5rem; }
-  .timer-buttons p {
-    font-size: 1.5rem;
-    padding: 0.5rem; }
-  .timer-buttons .plusminus {
-    color: #4de7b4;
-    transition: all 0.8s ease; }
-  .timer-buttons .plusminus:hover {
-    font-weight: bold;
-    font-size: 2rem;
-    cursor: pointer; }
+  .timer-container .timers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem; }
+    .timer-container .timers .timer-buttons {
+      padding: 0 1rem;
+      display: flex;
+      line-height: 1.5rem; }
+      .timer-container .timers .timer-buttons p {
+        font-size: 1.5rem;
+        padding: 0.5rem; }
+      .timer-container .timers .timer-buttons .plusminus {
+        color: #4de7b4;
+        transition: all 0.8s ease; }
+      .timer-container .timers .timer-buttons .plusminus:hover {
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer; }
 
 #clock {
   width: 250px;
@@ -58,5 +56,12 @@ body {
   width: 275px;
   height: 275px;
   cursor: pointer; }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.75rem; }
+
+  timer-container {
+    padding: 2rem; } }
 
 /*# sourceMappingURL=style.css.map */
