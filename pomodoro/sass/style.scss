@@ -77,6 +77,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    body {
+        max-height: 100vh;
+        max-width: 100vh;
+    }
     h1 {font-size: 2rem;}
     h3 {font-size: 1.5rem;}
     #clock {
