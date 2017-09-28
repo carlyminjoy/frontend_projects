@@ -4,6 +4,8 @@ $accent: adjust-hue($base, 180deg);
 $bg: #e5e5e5;
 $font: #fff;
 
+$clock-size: 250px;
+
 *, .container, button {
     padding: 0;
     margin: 0;
@@ -52,8 +54,8 @@ body {
 }
 
 #clock {
-    width: 250px;
-    height: 250px;
+    width: $clock-size;
+    height: $clock-size;
     border-radius: 50%;
     background: $bg;
     display: flex;
@@ -69,12 +71,22 @@ body {
     background-color: $base;
     color: $font;
     font-size: 2.5rem;
-    width: 275px;
-    height: 275px;
+    width: $clock-size * 1.1;
+    height: $clock-size * 1.1;
     cursor: pointer;
 }
 
 @media (max-width: 767px) {
+    h1 {font-size: 2rem;}
+    h3 {font-size: 1.5rem;}
+    #clock {
+        width: $clock-size * 0.9;
+        height: $clock-size * 0.9;
+    }
+    #clock:hover {
+        width: $clock-size;
+        height: $clock-size;
+    }
     timer-container {
         padding: 2rem;
     }
