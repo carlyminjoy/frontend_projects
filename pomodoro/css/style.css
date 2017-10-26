@@ -32,8 +32,6 @@ body {
         color: #4de7b4;
         transition: all 0.8s ease; }
       .timer-container .timers .timer-buttons .plusminus:hover {
-        font-weight: bold;
-        font-size: 2rem;
         cursor: pointer; }
 
 #clock {
