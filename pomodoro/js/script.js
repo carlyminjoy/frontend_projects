@@ -37,6 +37,7 @@ $(".break-less").click(function() {
 var startTimer = function(mins) {
     // initialises seconds to 0
     var secs = 0;
+    var totalTime = mins;
 
     // sets currentSession to true so another session cannot commence
     currentSession = true;

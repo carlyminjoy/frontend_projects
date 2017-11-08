@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Set List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.js"
+                integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+                crossorigin="anonymous"></script>
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="container justify-content-center">
+            <h1 class="text-center mb-5 mt-3">Set List: <span data-bind="text: songs().length"></span></h1>
+
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Composer</th>
+                        <th>Key</th>
+                    </tr>
+                </thead>
+
+                <tbody data-bind="foreach: songs">
+                    <tr>
+                        <td class="pr-3"><input data-bind="value: title" /></td>
+                        <td class="pr-3"><input data-bind="value: composer" /></td>
+                        <td class="pr-3"><select data-bind="options: $root.songKeys" /></td>
+                        <td><a href="#" data-bind="click: $root.removeSong">x</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="mt-3" data-bind="click: addSong">Add song</button>
+            <h3 data-bind="enable: songs > 0">Most popular key: <span data-bind="text: popularKey"</h3>
+        </div>
+
+        <h3></h3>
+
+        <script type="text/javascript" src="knockout/dist/knockout.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
